@@ -8,6 +8,9 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
+		paths: {
+			base: '/my-data'
+		},
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',

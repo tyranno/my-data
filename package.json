@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "npm run clean && vite build",
+		"clean": "trash build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -27,6 +28,7 @@
 		"prettier-plugin-svelte": "^2.10.0",
 		"svelte": "^3.58.0",
 		"svelte-check": "^2.10.3",
+		"trash-cli": "^5.0.0",
 		"tslib": "^2.5.0",
 		"typescript": "^4.9.5",
 		"vite": "^4.2.2"
