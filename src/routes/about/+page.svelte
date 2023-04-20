@@ -1,21 +1,33 @@
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>누구</title>
+	<meta name="description" content="About me" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
-
+	<h1>나는</h1>
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
+		컴퓨터에 이런저런 명령어를 나열하여 기계들이 그것들을 잘하게 짓을 2000년부터 본업으로 하고 있는
+		그렇고 그런 사람이다.
 	</p>
 
-	<pre>npm create svelte@latest</pre>
-
+	<h1>여기는</h1>
 	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
+		여기 자료들은 간간히 쌓인 지식을 저장하기 위한 것인데 어떤게 쓰여질 지는 대중없다. 그냥 페이지를
+		만들어 이것 저것 기억나는 자료를 올려 볼려 한다. 다만 github가 사라지지 않으면 남아있기를
+		바라고, 누군가에게 조금이라도 도움을 주든 볼거리를 주는 것으로 유지하련다.
+		<br />
+		<br />
+		어쩜 내가 나를 위한 기억공간이라 하겠다.
+	</p>
+	<pre>악의를 갖고 이 자료들을 활용하지 말고 자료를 모두 신뢰하지 마라..
+오류 투성인 정보들로 가득할 수 있다.</pre>
+
+	<h1>그리고</h1>
+	<p>
+		자잘 자잘한 정보들을 서로들 공유하면서 서로를 인정해주자. 언젠가 특이점이 오면 이런 일이나
+		정보들은 가치가 없을 수도 있다.
+		<br />
+		<br />
+		svelte로 만들다.
 	</p>
 </div>

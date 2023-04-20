@@ -10,10 +10,22 @@
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === `${base}/` ? 'page' : undefined}>
-				<a href="{base}/">Home</a>
+				<a href="{base}/">홈</a>
+			</li>
+			<li aria-current={$page.url.pathname === `${base}/what1` ? 'page' : undefined}>
+				<a href="{base}/what1">관심1</a>
+			</li>
+			<li aria-current={$page.url.pathname === `${base}/what2` ? 'page' : undefined}>
+				<a href="{base}/what2">관심2</a>
+			</li>
+			<li aria-current={$page.url.pathname === `${base}/what3` ? 'page' : undefined}>
+				<a href="{base}/what3">관심3</a>
+			</li>
+			<li aria-current={$page.url.pathname === `${base}/what4` ? 'page' : undefined}>
+				<a href="{base}/what4">관심4</a>
 			</li>
 			<li aria-current={$page.url.pathname === `${base}/about` ? 'page' : undefined}>
-				<a href="{base}/about">About</a>
+				<a href="{base}/about">뭐냐</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">

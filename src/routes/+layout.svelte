@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>TEST PAGE</p>
+		<p><a href="https://tyranno.github.io/my-data">tyranno data</a></p>
 	</footer>
 </div>
 
@@ -40,7 +40,10 @@
 		align-items: center;
 		padding: 12px;
 	}
-
+	footer a {
+		font-weight: bold;
+		color: var(--color-theme-2);
+	}
 	@media (min-width: 480px) {
 		footer {
 			padding: 12px 0;
