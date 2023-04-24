@@ -12,8 +12,8 @@
 			<li aria-current={$page.url.pathname === `${base}/` ? 'page' : undefined}>
 				<a href="{base}/">홈</a>
 			</li>
-			<li aria-current={$page.url.pathname === `${base}/what1` ? 'page' : undefined}>
-				<a href="{base}/what1">관심1</a>
+			<li aria-current={$page.url.pathname === `${base}/로또게임` ? 'page' : undefined}>
+				<a href="{base}/로또게임">로또게임</a>
 			</li>
 			<li aria-current={$page.url.pathname === `${base}/what2` ? 'page' : undefined}>
 				<a href="{base}/what2">관심2</a>
