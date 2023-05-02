@@ -1,17 +1,20 @@
-<script>
+<script lang="ts">
 	import Lottery from '../../lib/lottery/lottery.js';
 
-	const gameFreq = Lottery.frequency();
-	const lastWinFreq = Lottery.lastGameFreq();
+	const gameDate = Lottery.getGameDate();
+	$: gameFreq = Lottery.frequency(gameDate[0]);
+	$: lastWinFreq = Lottery.lastGameFreq(gameDate[0]);
+	$: arr전체빈도 = Array.from(gameFreq['전체 빈도']);
+	$: arr최근100빈도 = Array.from(gameFreq['최근100 빈도']);
 
-	const arr전체빈도 = Array.from(gameFreq['전체 빈도']);
-	const arr최근100빈도 = Array.from(gameFreq['최근100 빈도']);
-
-	/**
-	 * @param {number} num
-	 */
-	function isMatchNum(num) {
+	function isMatchNum(num: number) {
 		return lastWinFreq['전체 게임에서 최근게임의 빈도'].has(num);
+	}
+
+	function dateChanged(event: Event) {
+		const target = event.target as HTMLSelectElement;
+		gameFreq = Lottery.frequency(target.value);
+		lastWinFreq = Lottery.lastGameFreq(target.value);
 	}
 </script>
 
@@ -21,11 +24,26 @@
 </svelte:head>
 
 <div class="container">
-	<h1>로또게임</h1>
+	<div class="gamedate">
+		게임일 :
+		<select on:change={dateChanged} style="margin-left: 10px;">
+			{#each gameDate as value}
+				<option {value}>
+					{value}
+				</option>
+			{/each}
+		</select>
+		<div style="margin-left: 20px;">
+			당첨번호:
+			{#each [...lastWinFreq['전체 게임에서 최근게임의 빈도']] as [key]}
+				{`${key} `}
+			{/each}
+		</div>
+	</div>
 	<div class="freq-table">
 		<div>
 			<table>
-				<caption>이번주 게임 빈도 분석</caption>
+				<caption>게임 빈도 분석</caption>
 				<thead>
 					<tr>
 						<th>번호</th>
@@ -112,5 +130,13 @@
 	}
 	.match-num {
 		background-color: yellow !important;
+	}
+	.gamedate {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 5px;
+		text-align: center;
+		padding-bottom: 25px;
 	}
 </style>
