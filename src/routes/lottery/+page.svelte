@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Lottery from '../../lib/lottery/lottery.js';
+	import Lottery from '../../lib/lottery/lottery';
 
 	const gameDate = Lottery.getGameDate();
 	$: gameFreq = Lottery.frequency(gameDate[0]);

@@ -1,21 +1,20 @@
 import NumWin from './data/data.js';
-import NumGame from './data/game.js';
+//import NumGame from './data/game.js';
 
 class CLottery {
+	mapSortFreq: Map<number, number>;
+	map최근100회빈도: Map<number, number>;
+
 	constructor() {
 		this.mapSortFreq = new Map();
 		this.map최근100회빈도 = new Map();
 	}
 
-	/**
-	 * @returns {string[]}
-	 *
-	 */
-	getGameDate = () => {
+	getGameDate = (): string[] => {
 		/**
 		 * @type {string[]}
 		 */
-		let array최근100게임일 = [];
+		const array최근100게임일: string[] = [];
 		NumWin.slice(0, 100).map((e) => {
 			array최근100게임일.push(e.date);
 		});
@@ -23,15 +22,14 @@ class CLottery {
 	};
 
 	//빈도 분석
-	/**
-	 * @param {string} [date] - 날짜 선택
-	 * @returns {{
-	 *            '전체 빈도': Map<number, number>,
-	 * 						'최근100 빈도': Map<number, number>}} - 번호(1~45)/빈도
-	 */
-	frequency = (date) => {
-		let mapFreq = new Map();
-		let mapFreq100 = new Map();
+	frequency = (
+		date: string
+	): {
+		'전체 빈도': Map<number, number>;
+		'최근100 빈도': Map<number, number>;
+	} => {
+		const mapFreq = new Map();
+		const mapFreq100 = new Map();
 		let free100Cnt = 0;
 
 		NumWin.map((e) => {
@@ -63,14 +61,14 @@ class CLottery {
 	};
 
 	//최근 게임에대한 빈도 분석
-	/**
-	 * @param {string} [date] - 날짜 선택
-	 * @returns {{'전체 게임에서 최근게임의 빈도': Map<number, number>,
-	 *					'최근100번 게임에서 최근게임의 빈도': Map<number, number>}} - 번호(당첨번호)/빈도
-	 */
-	lastGameFreq = (date) => {
-		let lastFreq = new Map();
-		let lastFreq100 = new Map();
+	lastGameFreq = (
+		date: string
+	): {
+		'전체 게임에서 최근게임의 빈도': Map<number, number>;
+		'최근100번 게임에서 최근게임의 빈도': Map<number, number>;
+	} => {
+		const lastFreq = new Map();
+		const lastFreq100 = new Map();
 
 		let lastWinGame = null;
 		if (!date) {
