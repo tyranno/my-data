@@ -1,4 +1,4 @@
-import{S as tt,i as et,s as at,k as n,a as c,q as h,P as nt,l,h as r,c as d,m as _,r as i,n as N,E as t,b as Z,F as O}from"../chunks/index.15f07fb5.js";function lt($){let p,B,e,v,H,g,b,q,y,E,A,S,s,k,C,D,F,I,M,x,T,V,P,j,w,o,z,G,J,K,L;return{c(){p=n("meta"),B=c(),e=n("div"),v=n("h1"),H=h("나는"),g=c(),b=n("p"),q=h(`컴퓨터에 이런저런 명령어를 나열하여 기계들이 그것들을 잘하게 짓을 2000년부터 본업으로 하고 있는
+import{S as tt,i as et,s as at,k as n,a as c,q as h,P as nt,l,h as r,c as d,m as _,r as i,n as N,E as t,b as Z,F as O}from"../chunks/index.73283454.js";function lt($){let p,B,e,v,H,g,b,q,y,E,A,S,s,k,C,D,F,I,M,x,T,V,P,j,w,o,z,G,J,K,L;return{c(){p=n("meta"),B=c(),e=n("div"),v=n("h1"),H=h("나는"),g=c(),b=n("p"),q=h(`컴퓨터에 이런저런 명령어를 나열하여 기계들이 그것들을 잘하게 짓을 2000년부터 본업으로 하고 있는
 		그렇고 그런 사람이다.`),y=c(),E=n("h1"),A=h("여기는"),S=c(),s=n("p"),k=h(`여기 자료들은 간간히 쌓인 지식을 저장하기 위한 것인데 어떤게 쓰여질 지는 대중없다. 그냥 페이지를
 		만들어 이것 저것 기억나는 자료를 올려 볼려 한다. 다만 github가 사라지지 않으면 남아있기를
 		바라고, 누군가에게 조금이라도 도움을 주든 볼거리를 주는 것으로 유지하련다.
