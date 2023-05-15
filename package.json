@@ -26,12 +26,14 @@
 		"gh-pages": "^5.0.0",
 		"prettier": "^2.8.7",
 		"prettier-plugin-svelte": "^2.10.0",
-		"svelte": "^3.58.0",
 		"svelte-check": "^2.10.3",
 		"trash-cli": "^5.0.0",
 		"tslib": "^2.5.0",
 		"typescript": "^4.9.5",
 		"vite": "^4.2.2"
+	},
+	"dependencies": {
+		"svelte": "^3.59.1"
 	},
 	"type": "module"
 }

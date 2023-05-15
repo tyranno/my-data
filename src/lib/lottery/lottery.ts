@@ -1,5 +1,5 @@
 import NumWin from './data/data.js';
-//import NumGame from './data/game.js';
+import NumGame from './data/game.js';
 
 class CLottery {
 	mapSortFreq: Map<number, number>;
@@ -11,9 +11,6 @@ class CLottery {
 	}
 
 	getGameDate = (): string[] => {
-		/**
-		 * @type {string[]}
-		 */
 		const array최근100게임일: string[] = [];
 		NumWin.slice(0, 100).map((e) => {
 			array최근100게임일.push(e.date);
@@ -92,6 +89,18 @@ class CLottery {
 			'전체 게임에서 최근게임의 빈도': lastFreq,
 			'최근100번 게임에서 최근게임의 빈도': lastFreq100
 		};
+	};
+
+	//마지막 게임한 데이터
+	getLastGame = (date: string): Array<Array<number>> => {
+		console.log(date);
+		for (let i = 0; i < NumGame.length; i++) {
+			if (NumGame[i].date === date) {
+				console.log(NumGame[i].date);
+				return NumGame[i].nums;
+			}
+		}
+		return [];
 	};
 }
 
