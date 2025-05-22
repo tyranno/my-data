@@ -1,6 +1,5 @@
 <script>
-	import { page } from '$app/stores';
-	import { base } from '$app/paths';
+	import { page } from '$app/state';
 </script>
 
 <header>
@@ -9,23 +8,14 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li aria-current={$page.url.pathname === `${base}/` ? 'page' : undefined}>
-				<a href="{base}/">홈</a>
+			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
+				<a href="/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === `${base}/lottery` ? 'page' : undefined}>
-				<a href="{base}/lottery">로또게임</a>
+            <li aria-current={page.url.pathname === `/lottery` ? 'page' : undefined}>
+				<a href="/lottery">로또게임</a>
 			</li>
-			<li aria-current={$page.url.pathname === `${base}/what2` ? 'page' : undefined}>
-				<a href="{base}/what2">관심2</a>
-			</li>
-			<li aria-current={$page.url.pathname === `${base}/what3` ? 'page' : undefined}>
-				<a href="{base}/what3">관심3</a>
-			</li>
-			<li aria-current={$page.url.pathname === `${base}/what4` ? 'page' : undefined}>
-				<a href="{base}/what4">관심4</a>
-			</li>
-			<li aria-current={$page.url.pathname === `${base}/about` ? 'page' : undefined}>
-				<a href="{base}/about">뭐냐</a>
+			<li aria-current={page.url.pathname === `/about` ? 'page' : undefined}>
+				<a href="/about">뭐냐</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -39,7 +29,6 @@
 		display: flex;
 		justify-content: space-between;
 	}
-
 	nav {
 		display: flex;
 		justify-content: center;

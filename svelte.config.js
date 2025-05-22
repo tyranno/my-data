@@ -1,22 +1,5 @@
-import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: preprocess(),
-
-	kit: {
-		paths: {
-			base: '/my-data'
-		},
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null
-		})
-	}
-};
+const config = { kit: { adapter: adapter() } };
 
 export default config;

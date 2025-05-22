@@ -1,18 +1,16 @@
 <script>
+	import '../app.css';
 	import Header from './Header.svelte';
-	import './styles.css';
+	
+	let { children } = $props();
 </script>
 
 <div class="app">
 	<Header />
 
 	<main>
-		<slot />
+		{@render children()}
 	</main>
-
-	<footer>
-		<p><a href="https://tyranno.github.io/my-data">tyranno data</a></p>
-	</footer>
 </div>
 
 <style>
@@ -31,22 +29,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-	footer a {
-		font-weight: bold;
-		color: var(--color-theme-2);
-	}
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>
